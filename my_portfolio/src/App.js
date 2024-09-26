@@ -9,7 +9,7 @@ import {
 
 import RootLayOut from "./Layout/RootLayOut";
 
-import Home from "./pages/Home";
+import Hero from "./pages/Hero";
 import Skills from "./pages/Skills";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -19,7 +19,7 @@ import NotFound from "./pages/NotFound";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayOut />}>
-      <Route index element={<Home />} />
+      <Route path="/hero" element={<Hero />} />
       <Route path="/skills" element={<Skills />} />
       <Route path="/about" element={<About />} />
       <Route path="/projects" element={<Projects />} />
