@@ -1,0 +1,24 @@
+.theme-toggle{
+    cursor: pointer;
+    font-size: 2.2em;
+    svg {
+        fill:black;
+    }
+    margin: 15px;
+    float: right;
+}
+body.light-mode{
+    background-color: white;
+    color: black;
+}
+body.dark-mode{
+    background-color: black;
+    color: white;
+    svg {
+        fill:white;
+    }
+}
+.navbar.dark-mode{
+    background-color: white;
+    color: black;
+}
