@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400&display=swap);body,html {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%
+}
+*{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif
+
+}
+.App {
+  scroll-snap-type: y mandatory
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  transition: background-color .3s ease,color .3s ease
+}
