@@ -21,7 +21,11 @@ const Home = () => {
       </div>
       <div className="cta-buttons">
         {" "}
-        <a className="btn" Download href="../../public/cv-fe-v2.pdf">
+        <a
+          className="btn"
+          Download
+          href="/Mohamedibrahimfe/myPortfolio/blob/main/my_portfolio/public/cv-fe-v2.pdf"
+        >
           <svg
             stroke="currentColor"
             fill="currentColor"
