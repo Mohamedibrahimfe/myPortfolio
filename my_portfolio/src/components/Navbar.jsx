@@ -7,7 +7,7 @@ const Navbar = () => {
         <div class="toggle-button"> </div>
         <ul>
           <li className={({ isActive }) => (isActive ? "active" : "")}>
-            <NavLink to="/">
+            <NavLink to="/hero">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
