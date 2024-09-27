@@ -12,17 +12,20 @@
     align-items: center;
     text-align: center;
   }
-  
   .about h2 {
     font-size: 2rem;
     margin-bottom: 50px;
   }
-  
+  .about p svg {
+    padding-right: 5px;
+  }
   .about p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.6;
+    margin: 10px 0;
     text-align: justify;
     padding-inline: 30px;
+    width: 60%;
   }
   
   .contact {
@@ -71,4 +74,13 @@
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
-  
+@media screen and (max-width: 1200px) {
+  .about h2 {
+    margin-top: 70px;
+    font-size: 1.5rem;
+  }
+  .about p {
+    width: 110%;
+    margin: 5px 0;
+  }
+}

@@ -15,8 +15,8 @@ function App() {
       <Navbar />
       <Hero theme={localStorage.getItem("theme")} />
       <About />
-      {/* <Skills />
-      <Projects />
+      <Skills />
+      {/*<Projects />
       <Links />
       <Contact />
       <NotFound /> */}
