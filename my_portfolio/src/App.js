@@ -1,36 +1,27 @@
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
-
-import {
-  Route,
-  createRoutesFromElements,
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
-import RootLayOut from "./Layout/RootLayOut";
+import "./style/main.css";
 
 import Hero from "./pages/Hero";
+import Navbar from "./components/Navbar";
 import Skills from "./pages/Skills";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Links from "./pages/Links";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<RootLayOut />}>
-      <Route path="/hero" element={<Hero />} />
-      <Route path="/skills" element={<Skills />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/links" element={<Links />} />
-      <Route path="*" element={<NotFound />} />
-    </Route>
-  )
-);
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="App">
+      <Navbar />
+      <Hero theme={localStorage.getItem("theme")} />
+      <About />
+      {/* <Skills />
+      <Projects />
+      <Links />
+      <Contact />
+      <NotFound /> */}
+    </div>
+  );
 }
 
 export default App;
