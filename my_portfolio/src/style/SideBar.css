@@ -13,6 +13,7 @@
   justify-content: space-evenly;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: width 0.3s ease;
+  z-index: 500;
 }
 .sidebar li a {
   margin: 5px 0 ;
