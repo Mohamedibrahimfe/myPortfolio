@@ -8,7 +8,30 @@ const skills = () => {
       <br />
       <div className="skills-container">
         <Tabs>
-          <TabList>
+          <TabList
+            style={{
+              backgroundColor: "#EEE",
+              color: "black",
+              borderRadius: "6px",
+              padding: "10px",
+              display: "flex",
+              justifyContent: "center",
+              gap: "10px",
+              flexWrap: "wrap",
+              boxShadow: "0 4px 10px rgba(5 ,143, 255, 0.3) ",
+              cursor: "pointer",
+              fontWeight: "bold",
+              border: "none",
+              transition: "all .15s ease-in-out",
+              "&:active": {
+                backgroundColor: "white",
+                color: "black",
+                border: "none",
+                padding: "20%",
+                outline: "none",
+              },
+            }}
+          >
             <Tab>Languages</Tab>
             <Tab>Frameworks</Tab>
             <Tab>Libraries</Tab>
