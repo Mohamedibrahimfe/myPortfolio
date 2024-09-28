@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import aboutData from "../data/about.json";
 import "../style/About.css";
+import gsap from "gsap";
 
 const About = () => (
   <section className="about" id="about">
