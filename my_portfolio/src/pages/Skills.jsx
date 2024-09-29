@@ -20,6 +20,7 @@ const skills = () => {
               flexWrap: "wrap",
               boxShadow: "0 4px 10px rgba(5 ,143, 255, 0.3) ",
               cursor: "pointer",
+              fontSize: "1.2rem",
               fontWeight: "bold",
               border: "none",
               transition: "all .15s ease-in-out",
