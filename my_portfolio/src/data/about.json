@@ -19,5 +19,72 @@
       "github": "https://github.com/Mohamedibrahimfe",
       "linkedin": "https://www.linkedin.com/in/mohamed-ibrahim-a41bab290/"
     }
-  }
+  },
+  "projects": [
+    {
+      "title": "Nexus",
+      "description": "A social media app",
+      "link": "https://github.com/Mohamedibrahimfe/Nexus",
+      "demo": "https://nexus-social-media-app.netlify.app/",
+      "image": "project/nuxes.png",
+      "tech": "HTML, CSS, Bootstrap, JavaScript"
+    },
+    {
+      "title": "Age-calculator-app",
+      "description": "Frontend Mentor - Age calculator app",
+      "link": "https://github.com/Mohamedibrahimfe/Age-calculator-app",
+      "demo": "https://mohamedibrahimfe.github.io/Age-calculator-app/",
+      "image": "project/age-calc.png",
+      "tech": "HTML, CSS, JavaScript"
+    },
+
+    {
+      "title": "Tic-tac-toe",
+      "description": "Frontend Mentor - Tic-tac-toe game",
+      "link": "https://github.com/Mohamedibrahimfe/Tic-toc-toy-game",
+      "demo": "https://mohamedibrahimfe.github.io/Tic-toc-toy-game/",
+      "image": "project/tik.png",
+      "tech": "HTML, CSS, Animate.css, JavaScript"
+    },
+    {
+      "title": " PrayerTimesWithAPI",
+      "description": "PrayerTimes with API",
+      "link": "https://github.com/Mohamedibrahimfe/prayerTimesWithAPI",
+      "demo": "https://mohamedibrahimfe.github.io/prayerTimesWithAPI/",
+      "image": "project/prayer.png",
+      "tech": "HTML, CSS, JavaScript, API integration"
+    },
+    {
+      "title": "To do list",
+      "description": "Todolist _crud_ with local storage",
+      "link": "https://github.com/Mohamedibrahimfe/ToDoList-CRUD-",
+      "demo": "https://mohamedibrahimfe.github.io/ToDoList-CRUD-/",
+      "image": "project/todo.png",
+      "tech": "HTML, CSS, JavaScript"
+    },
+    {
+      "title": "CineFlash",
+      "description": "CineFlash - Movie App",
+      "link": "https://github.com/Mohamedibrahimfe/CineFlash-Movie-APP",
+      "demo": "https://mohamedibrahimfe.github.io/CineFlash-Movie-APP/",
+      "image": "project/movie.png",
+      "tech": "HTML, CSS, Bootstrap, JavaScript, API integration"
+    },
+    {
+      "title": "e-commerce-product-page",
+      "description": "Frontend Mentor - ecommerce-product-page",
+      "link": "https://github.com/Mohamedibrahimfe/ecommerce-product-page",
+      "demo": "https://mohamedibrahimfe.github.io/ecommerce-product-page/",
+      "image": "project/e-com.png",
+      "tech": "HTML, CSS, Bootstrap, JavaScript"
+    },
+    {
+      "title": "Image editor",
+      "description": "image editor",
+      "link": "https://github.com/Mohamedibrahimfe/image-editor",
+      "demo": "https://mohamedibrahimfe.github.io/image-editor/",
+      "image": "project/editor.png",
+      "tech": "HTML, CSS, JavaScript"
+    }
+  ]
 }

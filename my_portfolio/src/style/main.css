@@ -19,3 +19,39 @@ body.dark{
         }
     }
 }
+
+
+
+
+
+
+.title{
+    font-size: 2rem;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    cursor: pointer;
+    padding: 10px;
+  }
+   .title:hover{
+    animation: rotateandbounce 1s ease;
+  }
+  
+  @keyframes rotateandbounce {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100% {  
+      transform: rotate(0deg);
+    }
+  }

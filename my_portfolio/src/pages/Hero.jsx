@@ -39,7 +39,6 @@ const Home = (props) => {
       );
   }, []);
 
-  console.log(props);
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -73,7 +72,7 @@ const Home = (props) => {
           className="block"
           src="my_portfolio/public/356306451_54b19ada-d53e-4ee9-8882-9dfed1bf1396.svg"
         />
-        <h1 className="title" ref={titleRef}>
+        <h1 className="" ref={titleRef}>
           Mohamed Ibrahim
         </h1>
         <p className="subtitle" ref={subtitleRef}>
