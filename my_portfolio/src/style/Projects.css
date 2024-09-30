@@ -1,0 +1,85 @@
+.projects{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 30px;
+}
+.projects .project{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    min-height: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.project .project-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding: 2px 5px;
+}
+.project img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    text-indent: -9999px;
+    position: absolute;
+    right: 0;
+    transition: all 0.3s ease;
+}
+.project:hover img{
+    display: block;
+    transform: translate(10px, 10px);
+    text-indent: -9999px;
+}
+.project-technologies{
+    background-color: rgba(7, 145, 250, 0.09);
+    width: fit-content;
+    border-radius: 10px;
+    padding: 2px 5px;
+}
+.project-technologies p{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 2px 5px;
+    padding-left: 0;
+
+}
+.project>p{
+    margin-bottom: 10px;
+    padding: 2px 5px;
+}
+.project .links{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.project .links a{
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: lightgray;
+    margin-top: 50px;
+    transition: all 0.3s ease;
+}
+.project .links a:hover{
+    background-color: gray;
+    color: white;
+}
