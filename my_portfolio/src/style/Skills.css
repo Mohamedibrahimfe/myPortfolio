@@ -124,3 +124,24 @@
 .prob{
   background-image: url(../../public/skills/prob.jpeg);
 }
+@media screen and (max-width: 860px) {
+  .skills-list{
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: auto;
+    
+  }
+}
+@media screen and (max-width: 843px) {
+  .skills-list{
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 430px) {
+  .skills-list{
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+  }
+}

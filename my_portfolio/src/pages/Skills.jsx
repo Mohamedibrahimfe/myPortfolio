@@ -10,27 +10,18 @@ const skills = () => {
         <Tabs>
           <TabList
             style={{
-              backgroundColor: "#EEE",
               color: "black",
               borderRadius: "6px",
               padding: "10px",
               display: "flex",
               justifyContent: "center",
-              gap: "10px",
+              gap: "5px",
               flexWrap: "wrap",
-              boxShadow: "0 4px 10px rgba(5 ,143, 255, 0.3) ",
               cursor: "pointer",
-              fontSize: "1.2rem",
+              fontSize: "1.1rem",
               fontWeight: "bold",
-              border: "none",
+              border: "1px solid rgb(180 185 189 / 31%)",
               transition: "all .15s ease-in-out",
-              "&:active": {
-                backgroundColor: "white",
-                color: "black",
-                border: "none",
-                padding: "20%",
-                outline: "none",
-              },
             }}
           >
             <Tab>Languages</Tab>
