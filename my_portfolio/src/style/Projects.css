@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     width: 800px;
-    min-height: 200px;
+    min-height: 150px;
     border-radius: 10px;
     padding: 10px;
     text-align: justify;
@@ -22,10 +22,12 @@
     position: relative;
     overflow: hidden;
 }
+.protittle{
+    margin-top: 100px;
+}
 .project .project-title{
     font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 15px;
     padding: 2px 5px;
 }
 .project img{
@@ -50,13 +52,14 @@
     width: fit-content;
     border-radius: 10px;
     padding: 2px 5px;
+    margin-block: 10px;
 }
 .project-technologies p{
     font-size: 1rem;
     font-weight: 500;
     padding: 2px 5px;
     padding-left: 0;
-
+    margin: 0;
 }
 .project>p{
     margin-bottom: 10px;
@@ -82,4 +85,20 @@
 .project .links a:hover{
     background-color: gray;
     color: white;
+}
+
+@media screen and (max-width: 900px) {
+    .projects .project{
+        /* width: 100%; */
+        width: 100%;
+        min-height:400px ;   
+    }
+    .project img{
+        bottom: 60px;
+        padding: 20px;
+    }
+    .project .links{
+        position: absolute;
+        bottom: 10px;
+    }
 }

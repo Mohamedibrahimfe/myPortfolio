@@ -6,20 +6,23 @@ import Navbar from "./components/Navbar";
 import Skills from "./pages/Skills";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import Links from "./pages/Links";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer";
+import Hobbies from "./pages/Hobbies";
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Hero theme={localStorage.getItem("theme")} />
       <About />
-      <Skills />
       <Projects />
-      {/*<Links />
+      <Hobbies />
+      <Skills />
+      {/*
       <Contact />
-      <NotFound /> */}
+      <Footer />
+       */}
     </div>
   );
 }

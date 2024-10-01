@@ -86,5 +86,37 @@
       "image": "project/editor.png",
       "tech": "HTML, CSS, JavaScript"
     }
+  ],
+  "react": [
+    {
+      "title": "portfolio",
+      "description": "This is my portfolio",
+      "link": "https://github.com/Mohamedibrahimfe/myPortfolio",
+      "demo": "https://mohamedibrahimfe.github.io/myPortfolio/",
+      "image": "project/portfolio.png",
+      "tech": "React.js"
+    }
+  ],
+  "hobbies": [
+    {
+      "title": "Programming",
+      "image": "hobby/programming.png"
+    },
+    {
+      "title": "Sports",
+      "image": "hobby/sports.png"
+    },
+    {
+      "title": "Gaming",
+      "image": "hobby/gaming.png"
+    },
+    {
+      "title": "Chess",
+      "image": "hobby/chess.png"
+    },
+    {
+      "title": "Reading",
+      "image": "hobby/reading.png"
+    }
   ]
 }

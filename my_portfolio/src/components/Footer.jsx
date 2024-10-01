@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
 import "../style/Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
       <p>© 2024 Mohamed Ibrahim. All rights reserved.</p>
       <p>Made with ❤️ in Egypt</p>
-      <Link className="footer-link" to="/contact">
+      <a href="/contact" className="footer-link" to="/contact">
         Contact
-      </Link>
+      </a>
       <div className="social-icons">
         <a href="https://github.com/Mohamedibrahimfe">
           <i className="bi bi-github"></i>
