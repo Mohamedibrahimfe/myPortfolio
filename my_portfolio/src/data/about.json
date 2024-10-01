@@ -100,23 +100,23 @@
   "hobbies": [
     {
       "title": "Programming",
-      "image": "hobby/programming.png"
+      "image": "hobbies/programming.png"
     },
     {
-      "title": "Sports",
-      "image": "hobby/sports.png"
+      "title": "soccer",
+      "image": "hobbies/soccer.png"
     },
     {
       "title": "Gaming",
-      "image": "hobby/gaming.png"
+      "image": "hobbies/gaming.png"
     },
     {
       "title": "Chess",
-      "image": "hobby/chess.png"
+      "image": "hobbies/chess.png"
     },
     {
       "title": "Reading",
-      "image": "hobby/reading.png"
+      "image": "hobbies/reading.png"
     }
   ]
 }

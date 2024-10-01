@@ -1,15 +1,18 @@
 import data from "../data/about.json";
+import "../style/Hobbies.css";
 const Hobbies = () => {
   return (
-    <div>
-      <h1>Hobbies</h1>
-      {data.hobbies.map((hobby) => (
-        <div>
-          <img src={hobby.image} alt={hobby.title} />
-          <p>{hobby.title}</p>
-        </div>
-      ))}
-    </div>
+    <section id="hobbies">
+      <h1 className="title hobbys-title">Hobbies</h1>
+      <div className="hobbies">
+        {data.hobbies.map((hobby) => (
+          <div className="card">
+            <img src={hobby.image} className="hobby-image" alt={hobby.title} />
+            <p className="description">{hobby.title}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
