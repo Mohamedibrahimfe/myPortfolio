@@ -74,7 +74,7 @@
 	.message .form-control {
 			padding: .5rem 1.8rem;
 	}
-	
+
     .contact ::placeholder {
     font-family: 'Quicksand', sans-serif;
 		font-weight: 600;
@@ -102,7 +102,7 @@
 
 .contact  .btn.btn-primary {
   font-family: 'Quicksand', sans-serif;
-	font-weight: bold;
+font-weight: bold;
   height: 2.5rem;
   line-height: 2.5rem;
   padding: 0 3rem;
