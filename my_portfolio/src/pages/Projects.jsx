@@ -4,7 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import data from "../data/about.json";
 const Projects = () => {
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <h1 className="title protittle">Projects</h1>
       <Tabs>
         <TabList

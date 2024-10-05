@@ -1,9 +1,18 @@
 import React from "react";
 import "../style/Contact.css";
+import { useState } from "react";
 const Contact = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
-    <div>
-      <div class="container d-flex justify-content-center align-items-center">
+    <div className="contact" id="contact">
+      <div class="container ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 790 563"
@@ -761,9 +770,9 @@ const Contact = () => {
             </g>
           </g>
         </svg>
-
-        <form>
+        <form onSubmit={handleSubmit}>
           <h1 class="title text-center mb-4">Talk to Us</h1>
+
           <div class="form-group position-relative">
             <label for="formName" class="d-block">
               <i class="icon" data-feather="user"></i>
@@ -773,8 +782,11 @@ const Contact = () => {
               id="formName"
               class="form-control form-control-lg thick"
               placeholder="Name"
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
             />
           </div>
+
           <div class="form-group position-relative">
             <label for="formEmail" class="d-block">
               <i class="icon" data-feather="mail"></i>
@@ -784,14 +796,19 @@ const Contact = () => {
               id="formEmail"
               class="form-control form-control-lg thick"
               placeholder="E-mail"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
             />
           </div>
+
           <div class="form-group message">
             <textarea
               id="formMessage"
               class="form-control form-control-lg"
               rows="7"
               placeholder="Mensagem"
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
             ></textarea>
           </div>
           <div class="text-center">

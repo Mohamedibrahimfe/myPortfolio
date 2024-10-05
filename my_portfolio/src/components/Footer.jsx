@@ -1,21 +1,69 @@
 import "../style/Footer.css";
 const Footer = () => {
   return (
-    <div className="footer">
-      <p>© 2024 Mohamed Ibrahim. All rights reserved.</p>
-      <p>Made with ❤️ in Egypt</p>
-      <a href="/contact" className="footer-link" to="/contact">
-        Contact
-      </a>
-      <div className="social-icons">
-        <a href="https://github.com/Mohamedibrahimfe">
-          <i className="bi bi-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mohamed-ibrahim-a41bab290/">
-          <i className="bi bi-linkedin"></i>
-        </a>
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
       </div>
-    </div>
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link" href="#hero">
+            Home
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#about">
+            About
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#projects">
+            Projects
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#hobbies">
+            Hobbies
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#skills">
+            Skills
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#contact">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <p>&copy;2024 Mohamed ibrahim | All Rights Reserved</p>
+    </footer>
   );
 };
 

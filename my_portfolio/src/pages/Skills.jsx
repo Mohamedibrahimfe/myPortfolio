@@ -3,7 +3,7 @@ import "react-tabs/style/react-tabs.css";
 import "../style/Skills.css";
 const skills = () => {
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <h1 className="title">Skills</h1>
       <br />
       <div className="skills-container">

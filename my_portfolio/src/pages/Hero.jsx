@@ -59,7 +59,7 @@ const Home = (props) => {
   };
 
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div>
         <label className="switch">
           <p>Dark Mode</p>
