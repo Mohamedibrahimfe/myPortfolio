@@ -1,5 +1,4 @@
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
-import "./style/main.css";
 
 import Hero from "./pages/Hero";
 import Navbar from "./components/Navbar";

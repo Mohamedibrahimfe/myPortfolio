@@ -68,10 +68,7 @@ const Home = (props) => {
         </label>
       </div>
       <div className="hero-container">
-        <img
-          className="block"
-          src="my_portfolio/public/356306451_54b19ada-d53e-4ee9-8882-9dfed1bf1396.svg"
-        />
+        <img alt="" className="block" src="" />
         <h1 className="" ref={titleRef}>
           Mohamed Ibrahim
         </h1>
