@@ -89,13 +89,3 @@
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
 }
-.left{
-  animation: fadeInLeft  linear ;
-  animation-timeline: view();
-  animation-range: entry 0 cover 40%;
-}
-.right{
-  animation: fadeInRight  linear ;
-  animation-timeline: view();
-  animation-range: entry 0 cover 40%;
-}

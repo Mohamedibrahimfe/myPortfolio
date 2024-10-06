@@ -107,6 +107,9 @@
         margin-bottom: 20px;
         padding: 10px;
         position: relative;
+        animation: fadeInUp linear;
+        animation-timeline: view();
+        animation-range: entry 0 cover 40%;
     }
     .project img{
         bottom: 60px;

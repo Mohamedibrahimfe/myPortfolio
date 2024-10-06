@@ -112,9 +112,28 @@ body.dark{
   }
 }
 
+.up{
+  animation: fadeInUp  linear ;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
 
+.down{
+  animation: fadeInDown  linear ;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
 
-
+.left{
+  animation: fadeInLeft  linear ;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+.right{
+  animation: fadeInRight  linear ;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
 
 
 .title{
@@ -201,21 +220,21 @@ body.dark{
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translateY(100%);
   }
   100% {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
   }
 }
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    transform: translate3d(0, -100%, 0);
+    transform: translateY(-100%);
   }
   100% {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
   }
 }
 @keyframes fadeInLeft {
@@ -248,3 +267,18 @@ body.dark{
     transform: scale(1);
   }
 }
+@keyframes moving {
+  0% {
+    opacity: 0;
+    transform: translateX(700px);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-700px);
+  }
+}
+  

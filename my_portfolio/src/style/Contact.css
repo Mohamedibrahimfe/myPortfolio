@@ -59,9 +59,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: blink linear ;
-  animation-timeline:view(); 
-  animation-range: entry 0 cover 40%;
 }
 
 .contact form {
@@ -71,9 +68,7 @@
     font-family: "Pacifico", cursive;
     color: #212529;
     font-size: 2.5rem;
-   
   }
-
   .form-control {
     background-color: #f2f6f8;
     border-radius: 10px;
@@ -84,7 +79,6 @@
       height: 3.3rem;
       padding: 0.5rem 3.5rem;
     }
-
     &:focus {
       background-color: #f2f6f8;
       border: none;

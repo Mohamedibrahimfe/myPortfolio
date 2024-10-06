@@ -25,7 +25,8 @@
 .social-icon__item,
 .menu__item {
   list-style: none;
-}
+  animation: moving ease-in-out 4s infinite;
+  }
 
 .social-icon__link {
   font-size: 2rem;
@@ -126,5 +127,8 @@
   .footer p {
     font-size: 1rem;
   }
-  
+  .social-icon__item,
+  .menu__item{
+    animation: none!important;
+  }
 }

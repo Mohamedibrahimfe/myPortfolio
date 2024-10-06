@@ -17,6 +17,7 @@ const Contact = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 790 563"
           fill="none"
+          className="left"
         >
           <g id="Image">
             <g id="g14">
@@ -770,7 +771,7 @@ const Contact = () => {
             </g>
           </g>
         </svg>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="right">
           <h1 class="title text-center mb-4">Talk to Us</h1>
 
           <div class="form-group position-relative">

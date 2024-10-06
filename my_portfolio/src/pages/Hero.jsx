@@ -93,7 +93,7 @@ const Home = (props) => {
         <div className="cta-buttons">
           {" "}
           <button
-            className="btn"
+            className="btn "
             Download
             href="/Mohamedibrahimfe/myPortfolio/blob/main/my_portfolio/public/cv-fe-v2.pdf"
             ref={firstButtonRef}
