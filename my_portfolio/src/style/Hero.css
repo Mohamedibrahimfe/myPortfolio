@@ -215,22 +215,6 @@ button:active {
     transform: scale(1);
   }
 }
-[data-theme="dark"] {
-  background-color: black;
-  color: white;
-  --body-color: white;
-  --body-color: black;
-  --body-background-color: black;
-  --background-color: black;
-}
-[data-theme="light"] {
-  --body-background-color: white;
-  --body-color: black;
-  --body-background-color: black;
-  --body-color: white;
-  --body-background-color: white;
-  --background-color: white;
-}
 @media screen and (max-width: 600px) {
   .hero {
     height: 105vh !important;
@@ -253,7 +237,7 @@ button:active {
     align-items: center;
     padding: 0.5rem 0.8rem;
     border-radius: 10px;
-    width: 150px;
+    width: 240px;
     height: 50px;
     font-size: 15px;
     color: white !important;

@@ -91,10 +91,19 @@
 }
 
 @media screen and (max-width: 900px) {
+    .projects{
+        max-width: 60%;
+        margin: auto;
+    }
     .projects .project{
         /* width: 100%; */
-        width: 100%;
-        min-height:400px ;   
+        width: 400px;
+        max-width: 80%;
+        margin: auto;
+        min-height:400px ;
+        margin-bottom: 20px;
+        padding: 10px;
+        position: relative;
     }
     .project img{
         bottom: 60px;

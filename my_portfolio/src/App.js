@@ -7,7 +7,6 @@ import Skills from "./pages/Skills";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
 import Hobbies from "./pages/Hobbies";
 function App() {
