@@ -1,12 +1,26 @@
 import "../style/SideBar.css";
+import { useState } from "react";
 const Navbar = () => {
+  const [click, setClick] = useState([true, false, false, false, false, false]);
+
+  const handleClick = (index) => {
+    setClick([false, false, false, false, false, false]);
+    setClick((prev) => {
+      prev[index] = true;
+      return prev;
+    });
+  };
   return (
     <nav>
-      <div class="sidebar ">
+      <div class="sidebar">
         <div class="toggle-button"> </div>
         <ul>
-          <li className={({ isActive }) => (isActive ? "active" : "")}>
-            <a href="#hero">
+          <li>
+            <a
+              href="#hero"
+              className={click[0] ? "active" : ""}
+              onClick={() => handleClick(0)}
+            >
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -20,8 +34,12 @@ const Navbar = () => {
               </svg>
             </a>
           </li>
-          <li className={({ isActive }) => (isActive ? "active" : "inactive")}>
-            <a href="#about">
+          <li>
+            <a
+              href="#about"
+              className={click[1] ? "active" : ""}
+              onClick={() => handleClick(1)}
+            >
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -35,8 +53,12 @@ const Navbar = () => {
               </svg>
             </a>
           </li>
-          <li className={({ isActive }) => (isActive ? "active" : "inactive")}>
-            <a href="#skills">
+          <li>
+            <a
+              href="#projects"
+              className={click[2] ? "active" : ""}
+              onClick={() => handleClick(2)}
+            >
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -50,23 +72,31 @@ const Navbar = () => {
               </svg>
             </a>
           </li>
-          <li className={({ isActive }) => (isActive ? "active" : "inactive")}>
-            <a href="#projects">
+          <li>
+            <a
+              href="#hobbies"
+              className={click[3] ? "active" : ""}
+              onClick={() => handleClick(3)}
+            >
               <svg
                 stroke="currentColor"
                 fill="currentColor"
                 stroke-width="0"
-                viewBox="0 0 576 512"
+                viewBox="0 0 448 512"
                 height="1em"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M320 288h-32V64h32zM224 64H64v192h160V64zM480 64v192h160V64h-160zM192 448h-32v-64h32zM64 448H0v64h64v-64zM576 64H512v192h64V64zM64 64H0v64h64V64zM448 448h-32v-64h32zM320 64h-64v192h64V64z"></path>
+                <path d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"></path>
               </svg>
             </a>
           </li>
-          <li className={({ isActive }) => (isActive ? "active" : "inactive")}>
-            <a href="#skills">
+          <li>
+            <a
+              href="#skills"
+              className={click[4] ? "active" : ""}
+              onClick={() => handleClick(4)}
+            >
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -80,8 +110,12 @@ const Navbar = () => {
               </svg>
             </a>
           </li>
-          <li className={({ isActive }) => (isActive ? "active" : "inactive")}>
-            <a href="#contact">
+          <li>
+            <a
+              href="#contact"
+              className={click[5] ? "active" : ""}
+              onClick={() => handleClick(5)}
+            >
               <svg
                 stroke="currentColor"
                 fill="currentColor"
