@@ -78,10 +78,4 @@
 }
 .aboutTitle {
   font-size: 4rem!important;
-  animation: comeFromRight linear;
-  animation-timeline: view();
-  animation-range: entry 0 cover 40%;
-}
-.aboutTitle:hover{
-  animation: rotateandbounce 0.5s linear;
 }

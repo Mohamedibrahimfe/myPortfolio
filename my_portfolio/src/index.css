@@ -115,28 +115,7 @@ body.dark{
     color: white!important;
 }
 }
-.up{
-  animation: fadeInUp  linear ;
-  animation-timeline: view();
-  animation-range: entry 0 cover 40%;
-}
 
-.down{
-  animation: fadeInDown  linear ;
-  animation-timeline: view();
-  animation-range: entry 0 cover 40%;
-}
-
-.left{
-  animation: fadeInLeft  linear ;
-  animation-timeline: view();
-  animation-range: entry 0 cover 20%;
-}
-.right{
-  animation: fadeInRight  linear ;
-  animation-timeline: view();
-  animation-range: entry 0 cover 20%;
-}
 
 
 .title{
