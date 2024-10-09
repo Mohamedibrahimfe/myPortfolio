@@ -261,15 +261,3 @@ button:active {
     );
   }
 }
-
-.clipLeft {
-  animation: clipToLeft  ease-in-out ;
-  animation-timeline: view();
-  animation-range: entry 0 cover 30%;
-}
-
-.clipRight {
-  animation: clipToRight  ease-in-out ;
-  animation-timeline: view();
-  animation-range: entry 0 cover 30%;
-}

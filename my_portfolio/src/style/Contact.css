@@ -128,7 +128,6 @@
   background-size: 100% 100%;
   transform: translateY(-0.15em);
 }
-
 @media screen and (max-width: 768px) {
   .contact .container{
     flex-direction: column;
@@ -150,6 +149,10 @@
   }
   .btn.btn-primary {
     margin-top: 20px;
-    padding: 35px ;
+  }
+}
+@media screen and (max-width: 450px) {
+  .contact .title {
+    font-size: 2rem;
   }
 }

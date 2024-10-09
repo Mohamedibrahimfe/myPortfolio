@@ -22,11 +22,6 @@
   margin-top: 50px;
   
 }
-.skill{
-  animation: fadeIn linear;
-  animation-timeline: view();
-  animation-range: entry 0 cover 40%;
-}
 .skills-list{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 

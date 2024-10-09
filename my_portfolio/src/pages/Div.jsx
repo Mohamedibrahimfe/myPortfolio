@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 // import the font
-
+import "../style/Div.css";
 const Div = () => {
   const comp = useRef(null);
   useLayoutEffect(() => {
@@ -37,7 +37,7 @@ const Div = () => {
     return () => ctx.revert();
   });
   return (
-    <div ref={comp}>
+    <div ref={comp} className="div">
       <div
         style={{
           display: "flex",

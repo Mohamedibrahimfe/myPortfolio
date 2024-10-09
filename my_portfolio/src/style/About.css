@@ -68,14 +68,25 @@
 }
 @media screen and (max-width: 1200px) {
   .about h2 {
-    margin-top: 70px;
+    /* margin-top: 70px; */
     font-size: 1.5rem;
   }
   .about p {
     width: 110%;
     margin: 5px 0;
   }
+  .title{
+  }
 }
 .aboutTitle {
   font-size: 4rem!important;
+}
+@media screen and (min-width: 800px) {
+  .about{
+    margin-top: -300px;
+    margin-bottom: 0;
+  }
+  .title{
+    font-size: 3rem!important;
+  }
 }
