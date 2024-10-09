@@ -130,7 +130,7 @@ body.dark{
 .left{
   animation: fadeInLeft  linear ;
   animation-timeline: view();
-  animation-range: entry 0 cover 40%;
+  animation-range: entry 0 cover 20%;
 }
 .right{
   animation: fadeInRight  linear ;
@@ -169,7 +169,14 @@ body.dark{
     transform: rotate(0deg);
   }
 }
-
+@keyframes comeFromRight {
+  0% {
+    transform: translateY(-250px) scale(0.5);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
 
 /* animations */
 @keyframes fadeIn {
@@ -261,7 +268,7 @@ body.dark{
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-40%, 0, 0);
   }
   100% {
     opacity: 1;
@@ -271,7 +278,7 @@ body.dark{
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(40%, 0, 0);
   }
   100% {
     opacity: 1;
@@ -291,7 +298,7 @@ body.dark{
 @keyframes moving {
   0% {
     opacity: 0;
-    transform: translateX(700px);
+    transform: translateX(400px);
   }
   75% {
     opacity: 1;
@@ -299,7 +306,7 @@ body.dark{
   }
   100% {
     opacity: 0;
-    transform: translateX(-700px);
+    transform: translateX(-400px);
   }
 }
   

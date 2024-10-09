@@ -16,32 +16,32 @@ const Home = (props) => {
     tl.fromTo(
       titleRef.current,
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 0.5, ease: "power4.out", delay: 2 }
+      { opacity: 1, y: 0, duration: 0.8, ease: "power4.out", delay: 5 }
     )
       .fromTo(
         subtitleRef.current,
         { opacity: 0, y: 100 },
-        { opacity: 1, y: 0, duration: 1, ease: "power4.out", delay: 0.7 }
+        { opacity: 1, y: 0, duration: 0.8, ease: "power4.out" }
       )
       .fromTo(
         firstButtonRef.current,
         { opacity: 0, x: -100 },
-        { opacity: 1, x: 0, duration: 1.5, ease: "power4.out" }
+        { opacity: 1, x: 0, duration: 0.8, ease: "power4.out" }
       )
       .fromTo(
         secondButtonRef.current,
         { opacity: 0, x: 100 },
-        { opacity: 1, x: 0, duration: 1.5, ease: "power4.out" }
+        { opacity: 1, x: 0, duration: 0.8, ease: "power4.out" }
       )
       .fromTo(
         socialRef.current,
         { opacity: 0, y: 100 },
-        { opacity: 1, y: 0, duration: 2, ease: "power4.out" }
+        { opacity: 1, y: 0, duration: 0.8, ease: "power4.out" }
       )
       .fromTo(
         imgRef.current,
         { opacity: 0, y: -100 },
-        { opacity: 1, y: 0, duration: 2, ease: "power4.out" }
+        { opacity: 1, y: 0, duration: 0.8, ease: "power4.out" }
       );
   }, []);
 
@@ -54,33 +54,57 @@ const Home = (props) => {
       document.body.classList.remove("dark");
     }
   }, []);
+  const [isChecked, setIsChecked] = useState(false);
   const toggleDarkMode = () => {
     if (document.body.classList.contains("dark")) {
       document.body.classList.remove("dark");
       localStorage.setItem("theme", "light");
+      localStorage.setItem("isChecked", true);
+      setIsChecked(true);
     } else {
       document.body.classList.add("dark");
       localStorage.setItem("theme", "dark");
+      localStorage.setItem("isChecked", false);
+      setIsChecked(false);
     }
   };
 
+  const sections = [
+    "#hero",
+    "#about",
+    "#projects",
+    "#hobbies",
+    "#skills",
+    "#contact",
+  ];
   const [currentSection, setCurrentSection] = useState("#hero");
-  const [nextSection, setNextSection] = useState("");
-  const handelNextSection = () => {
-    if (currentSection === "#hero") {
-      setNextSection("#about");
-    } else if (currentSection === "#about") {
-      setNextSection("#projects");
-    } else if (currentSection === "#projects") {
-      setNextSection("#hobbies");
-    } else if (currentSection === "#hobbies") {
-      setNextSection("#skills");
-    } else if (currentSection === "#skills") {
-      setNextSection("#contact");
-    }
-
-    setCurrentSection(nextSection);
+  const handleNextSection = () => {
+    const currentIndex = sections.indexOf(currentSection);
+    const nextIndex = (currentIndex + 1) % sections.length; // Loops back to the first section after the last one
+    setCurrentSection(sections[nextIndex]);
   };
+  const [isAtBottom, setIsAtBottom] = useState(false);
+
+  const checkIfAtBottom = () => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    // If the scroll position is near the bottom (within 10px of the end)
+    if (scrollPosition >= pageHeight - 150) {
+      setIsAtBottom(true);
+    } else {
+      setIsAtBottom(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkIfAtBottom);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", checkIfAtBottom);
+    };
+  }, []);
 
   return (
     <>
@@ -89,12 +113,18 @@ const Home = (props) => {
         <div>
           <label className="switch">
             <p>Dark Mode</p>
-            <input type="checkbox" onClick={toggleDarkMode} />
+            <input
+              type="checkbox"
+              checked={localStorage.getItem("isChecked") === "false"}
+              onClick={toggleDarkMode}
+            />
             <span className="slider round"></span>
           </label>
         </div>
         <div className="hero-container">
-          <img ref={imgRef} alt="" className="block" src="" />
+          <div ref={imgRef}>
+            <img alt="" className="block" src="" />
+          </div>
           <h1 className="" ref={titleRef}>
             Mohamed Ibrahim
           </h1>
@@ -159,21 +189,45 @@ const Home = (props) => {
         </div>
         <a
           className="next-section"
-          href={nextSection}
-          onClick={handelNextSection}
+          href={currentSection}
+          onClick={handleNextSection}
         >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 448 512"
-            class="next-section-icon"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-          </svg>
+          {!isAtBottom ? (
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              class="next-section-icon"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+            </svg>
+          ) : (
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 7C12.2652 7 12.5196 7.10536 12.7071 7.29289L19.7071 14.2929C20.0976 14.6834 20.0976 15.3166 19.7071 15.7071C19.3166 16.0976 18.6834 16.0976 18.2929 15.7071L12 9.41421L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L11.2929 7.29289C11.4804 7.10536 11.7348 7 12 7Z"
+                  fill="#000000"
+                ></path>{" "}
+              </g>
+            </svg>
+          )}
         </a>
       </section>
     </>

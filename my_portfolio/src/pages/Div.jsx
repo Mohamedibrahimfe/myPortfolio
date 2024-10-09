@@ -49,14 +49,16 @@ const Div = () => {
           color: "white",
           position: "absolute",
           width: "100%",
-          backgroundColor: "black",
+          background: "url(/giphy.webp)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           zIndex: "99",
           top: "0",
           left: "0",
           gap: "40px",
           height: "103%",
         }}
-        className="toggle-animation"
         id="intro-slider"
       >
         <h1
