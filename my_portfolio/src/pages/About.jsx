@@ -10,11 +10,11 @@ const About = () => {
       "#about",
       {
         opacity: 0,
-        y: -100,
+        x: -100,
       },
       {
         opacity: 1,
-        y: 0,
+        x: 0,
         duration: 1,
         scrollTrigger: {
           trigger: "#about",
@@ -24,9 +24,36 @@ const About = () => {
       }
     );
 
-    gsap.fromTo(".right", { x: 100}, { x: 0, duration: 1 });
+    gsap.fromTo(
+      ".right",
+      { opacity: 0, x: 100 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top 80%",
+          end: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
 
-    gsap.fromTo(".left", { x: -100 }, { x: 0, duration: 1 });
+    gsap.fromTo(
+      ".left",
+      { x: -100, opacity: 0 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
   })
   return (
     <section className="about" id="about">

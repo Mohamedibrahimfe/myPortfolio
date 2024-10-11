@@ -55,13 +55,15 @@
 }
 .sql{
   background-image: url(../../public/skills/sql.png);
-  background-size: contain;
+  background-size: 100px;
 }
 .cpp{
   background-image: url(../../public/skills/cpp.png);
 }
 .php{
   background-image: url(../../public/skills/php.png);
+  background-blend-mode: soft-light;
+
 }
 .react{
   background-image: url(../../public/skills/react.png);
@@ -75,7 +77,8 @@
 }
 .vs{
   background-image: url(../../public/skills/vs.png);
-  background-size: 100px;
+  background-size: cover;
+  /* background-position: center; */
 }
 .git{
   background-image: url(../../public/skills/git.png);

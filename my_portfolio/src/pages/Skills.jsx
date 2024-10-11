@@ -36,31 +36,31 @@ const skills = () => {
               <article className="skills-list">
                 <figure>
                   {" "}
-                  <div className="logo html skill down left">html </div>
+                  <div className="logo html  right">html </div>
                 </figure>
                 <figure>
                   {" "}
-                  <div className="logo css skill up left">CSS</div>
+                  <div className="logo css  right">CSS</div>
                 </figure>
                 <figure>
                   {" "}
-                  <div className="logo js skill up right">JavaScript</div>
+                  <div className="logo js  left">JavaScript</div>
                 </figure>
                 <figure>
                   {" "}
-                  <div className="logo sql skill down right">SQL</div>
+                  <div className="logo sql  left">SQL</div>
                 </figure>
                 <figure>
                   {" "}
-                  <div className="logo python skill up right">Python</div>
+                  <div className="logo python  left">Python</div>
                 </figure>
                 <figure>
                   {" "}
-                  <div className="logo cpp skill down left">c++</div>
+                  <div className="logo cpp  right">c++</div>
                 </figure>
                 <figure>
                   {" "}
-                  <div className="logo php skill up left">php</div>
+                  <div className="logo php  right">php</div>
                 </figure>
               </article>
             </div>

@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  height: 100vh;
+  height: 100vh!important;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -14,6 +14,7 @@
 .about h2 {
   font-size: 2rem;
   margin-bottom: 50px;
+  margin-top: 150px;
 }
 .about p svg {
   padding-right: 5px;
