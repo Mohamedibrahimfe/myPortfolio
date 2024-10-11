@@ -84,7 +84,7 @@
 }
 @media screen and (min-width: 800px) {
   .about{
-    margin-top: -300px;
+    /* margin-top: 300px; */
     margin-bottom: 0;
   }
   .title{
