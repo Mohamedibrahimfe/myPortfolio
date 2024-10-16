@@ -27,39 +27,7 @@
   padding-inline: 30px;
   width: 60%;
 }
-.contact {
-  font-family: "Arial", sans-serif;
-  text-align: center;
-}
-.contact-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px;
-  width: 80%;
-  max-width: 600px;
-}
-.contact-info {
-  flex: 1;
-  text-align: center;
-}
-.contact-info-addr {
-  text-align: center;
-}
-.contact-actions {
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-}
-.contact p svg {
-  padding-right: 5px;
-}
-.contact p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 10px 0;
-}
+
 .qr-code {
   margin-top: 20px;
 }

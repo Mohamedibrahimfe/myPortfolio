@@ -125,7 +125,7 @@ const Home = (props) => {
           <div ref={imgRef}>
             <img alt="" className="block" src="" />
           </div>
-          <h1 className="" ref={titleRef}>
+          <h1 className="my-name" ref={titleRef}>
             Mohamed Ibrahim
           </h1>
           <p className="subtitle" ref={subtitleRef}>
