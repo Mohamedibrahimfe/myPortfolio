@@ -156,3 +156,66 @@
     font-size: 2rem;
   }
 }
+
+.contact {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px;
+  width: 80%;
+  max-width: 600px;
+}
+.contact-info {
+  flex: 1;
+  text-align: center;
+}
+.contact-info-addr {
+  text-align: center;
+}
+.contact-actions {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+.contact p svg {
+  padding-right: 5px;
+}
+.contact p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+.contact-title {
+  font-size: 2rem;
+  margin-top: 50px;
+}
+.my-contact{
+  margin-top: -100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.my-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.contact-link{
+  color: #006646!important;
+  text-decoration: none;
+}
+.contact-link:hover{
+  text-decoration: underline;
+  color:#006666!important ;
+}
+.contact-icon{
+  font-size: 20px;
+}

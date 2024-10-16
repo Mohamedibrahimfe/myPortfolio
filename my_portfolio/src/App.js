@@ -12,7 +12,7 @@ import Hobbies from "./pages/Hobbies";
 import { useState, useEffect, useRef } from "react";
 function App() {
   // State to track active section
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("hero");
 
   // Function to update active section based on scroll position
   const handleScroll = () => {
