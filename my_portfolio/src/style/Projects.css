@@ -130,4 +130,7 @@
     .projects .project{
         width: 300px;
     }
+    .projects{
+        margin-top: 80px!important;
+    }
 }

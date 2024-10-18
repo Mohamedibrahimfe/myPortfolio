@@ -8,29 +8,29 @@ import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
-  useEffect(() => {
-    const elements = document.querySelectorAll(".project");
-    elements.forEach((element) => {
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        x: 300,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.5,
-        stegger: 1,
-        scrollTrigger: {
-          trigger: element,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  });
-    })
+  // useEffect(() => {
+  //   const elements = document.querySelectorAll(".project");
+  //   elements.forEach((element) => {
+  //   gsap.fromTo(
+  //     element,
+  //     {
+  //       opacity: 0,
+  //       x: 300,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       x: 0,
+  //       duration: 0.5,
+  //       stegger: 1,
+  //       scrollTrigger: {
+  //         trigger: element,
+  //         start: "top 80%",
+  //         toggleActions: "play none none reverse",
+  //       },
+  //     }
+  //   );
+  // });
+  //   })
   return (
     <section className="projects" id="projects">
       <h1 className="title protittle">Projects</h1>
