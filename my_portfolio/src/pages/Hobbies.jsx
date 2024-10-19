@@ -11,14 +11,11 @@ const Hobbies = () => {
       ".card",
       {
         opacity: 0,
-        y: 100,
-        rotate: 200,
       },
       {
         opacity: 1,
-        y: 0,
         duration: 0.7,
-        rotate: 0,
+
         stagger: 0.5,
         scrollTrigger: {
           trigger: ".hobbies",
@@ -28,7 +25,6 @@ const Hobbies = () => {
       }
     );
 
-   
   })
   return (
     <section id="hobbies">

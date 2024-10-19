@@ -1,3 +1,11 @@
+.theme-icon{
+  position: fixed;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  right: 15px;
+  top: 15px;
+}
 .switch {
   position: fixed;
   display: inline-block;
@@ -58,12 +66,12 @@ input:checked + .slider:before {
   margin-left: -90px;
   margin-top: 10px;
 }
-@media screen and (max-width: 600px) {
+@media(max-width: 600px) {
   .switch {
     width: 40px;
     height: 20px;
-    right: 15px;
-    top: 15px;
+    right: 10px;
+    top: 10px;
   }
   .switch p {
     margin-left: -90px;
@@ -84,5 +92,10 @@ input:checked + .slider:before {
     -webkit-transform: translateX(16px);
     -ms-transform: translateX(16px);
     transform: translateX(16px);
+  }
+}
+@media(max-width: 450px) {
+  .theme-icon{
+    position: fixed!important;
   }
 }

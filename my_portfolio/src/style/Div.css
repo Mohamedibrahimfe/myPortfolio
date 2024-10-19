@@ -12,12 +12,7 @@
 }
 @media (max-width: 430px) {
   .div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  #intro-slider {
+    margin-bottom: 50px;
   }
   #title1 {
     font-size: 3rem !important;
@@ -40,5 +35,11 @@
   }
   #title2 {
     font-size: 3.5rem;
+  }
+}
+@media (max-width: 430px) {
+  .div {
+    position: absolute;
+    z-index: 99999999;
   }
 }

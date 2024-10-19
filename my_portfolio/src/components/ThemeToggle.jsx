@@ -22,6 +22,7 @@ const ThemeToggle = () => {
     document.body.classList.remove("light-mode", "dark-mode");
     document.body.classList.add(newTheme);
     localStorage.setItem("theme", newTheme);
+    // document.getElementById(".next-section-icon").setAttribute("fill", "#fff");
   };
 
   return (
