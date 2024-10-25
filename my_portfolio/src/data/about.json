@@ -103,7 +103,7 @@
       "link": "https://github.com/Mohamedibrahimfe/myPortfolio",
       "demo": "https://mohamedibrahimfe.github.io/myPortfolio/",
       "image": "project/portfolio.png",
-      "tech": "React.js"
+      "tech": "React.js animate.css gsap"
     },
     {
       "id": 2,
@@ -124,7 +124,25 @@
       "tech": "React.js, Tailwindcss"
     },
     {
-      "di": 4,
+      "id": 4,
+      "title": "Space tourism",
+      "description": "Frontend Mentor || Space tourism with React.js",
+      "link": "https://github.com/Mohamedibrahimfe/space-tourism",
+      "demo": "https://space-tourism-wheat-zeta.vercel.app/",
+      "image": "project/space.png",
+      "tech": "React.js animate.css"
+    },
+    {
+      "id": 5,
+      "title": "Hoom Room page",
+      "description": "Frontend Mentor - Room home page",
+      "link": "https://github.com/Mohamedibrahimfe/room-home-page",
+      "demo": "https://room-home-page-mu.vercel.app/",
+      "image": "project/room.png",
+      "tech": "React.js, Tailwindcss"
+    },
+    {
+      "id": 6,
       "title": "comming soon",
       "description": "comming soon",
       "link": "#",
