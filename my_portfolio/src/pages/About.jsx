@@ -57,12 +57,12 @@ const About = () => {
   // })
   return (
     <section className="about" id="about">
-      <h2 className="aboutTitle">{aboutData.data.about.greeting}</h2>
+      <h2 className="aboutTitle ">{aboutData.data.about.greeting}</h2>
       <p className="left">{aboutData.data.about.description}</p>
 
       <br />
       <p
-        className="right"
+        className="right "
         dangerouslySetInnerHTML={{ __html: aboutData.data.about.education }}
       />
 
