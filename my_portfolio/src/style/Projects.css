@@ -6,6 +6,7 @@
     justify-content: center;
     height: 100%;
     gap: 30px;
+    margin-top: 150px;
 }
 .projects .project{
     display: flex;
@@ -42,6 +43,7 @@
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
     text-indent: -9999px;
     position: absolute;
+    z-index: 99;
     right: 0;
     transition: all 0.3s ease;
 }
@@ -105,7 +107,7 @@
 @media screen and (max-width: 600px) {
     .projects{
         margin: auto;
-        margin-bottom: 100px;
+        margin-top: 0!important;
     }
     .projects .project{
         width: 450px;
@@ -131,6 +133,6 @@
         width: 300px;
     }
     .projects{
-        margin-top: 280px!important;
+        /* margin-top: 280px!important; */
     }
 }

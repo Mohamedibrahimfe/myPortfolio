@@ -143,6 +143,15 @@
     },
     {
       "id": 6,
+      "title": "Multistep form",
+      "description": "Frontend Mentor - Multistep form",
+      "link": "https://github.com/Mohamedibrahimfe/Multi-step-form",
+      "demo": "https://multi-steps-from.vercel.app/",
+      "image": "project/form.png",
+      "tech": "React.js"
+    },
+    {
+      "id": 90,
       "title": "comming soon",
       "description": "comming soon",
       "link": "#",

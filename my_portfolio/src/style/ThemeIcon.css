@@ -5,6 +5,7 @@
   height: 34px;
   right: 15px;
   top: 15px;
+  z-index: 999999999;
 }
 .switch {
   position: fixed;
@@ -72,6 +73,7 @@ input:checked + .slider:before {
     height: 20px;
     right: 10px;
     top: 10px;
+    
   }
   .switch p {
     margin-left: -90px;

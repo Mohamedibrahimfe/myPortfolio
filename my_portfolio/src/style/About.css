@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  height: 100vh!important;
+  /* height: 100vh!important; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
 .about h2 {
   font-size: 2rem;
   margin-bottom: 50px;
-  margin-top: 150px;
+  /* margin-top: 150px; */
 }
 .about p svg {
   padding-right: 5px;
@@ -52,13 +52,14 @@
 @media screen and (max-width: 800px) {
   .about{
     width: 100%;
-    margin-bottom: 50px;
     margin-top: -50px;
+    height: 100%;
   }
   .title{
     font-size: 3rem!important;
   }
   .about p{
-    width: 135%!important;
+    width: 130%!important;
+    margin-bottom: 0;
   }
 }
