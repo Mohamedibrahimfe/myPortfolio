@@ -10,7 +10,7 @@ import Skills from './pages/skills/Skills'
 import Footer from './components/footer/Footer'
 import Contact from './pages/contact/Contact'
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 function App() {
   const [activeSection, setActiveSection] = useState("hero");
   // Function to update active section based on scroll position
@@ -37,7 +37,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [activeSection]);
   return (
     <div className="App">
       <Navbar activeSection={activeSection} />

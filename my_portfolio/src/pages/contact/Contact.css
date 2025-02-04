@@ -1,123 +1,65 @@
-
-#envelope {
-  animation: float 2s ease-in-out infinite;
+.contact{
+  padding-top: 100px;
+  padding-bottom: 200px;
 }
-.contact .container {
-  height: 100vh;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container{
+ width: 30%;
+ margin: auto;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black!important;
+}
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: black!important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+.status{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
-.btn.btn-primary {
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  padding: 0 3rem;
-  border: 0;
-  border-radius: 10px;
-  background-image: linear-gradient(131deg, #120b90, #3c70ff, #8d3cff, #3cd1ff);
-  background-size: 300% 100%;
-  transition: all 0.3s ease-in-out;
+/* dark */
+
+body.dark{
+  .contact{
+    background-color: #1A1A1A;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+.status{
   color: white;
 }
-.btn.btn-primary:hover:enabled {
-  box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
-  background-size: 100% 100%;
-  transform: translateY(-0.15em);
-}
-@media screen and (max-width: 768px) {
-  .contact .container{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .contact svg {
-    display: none;  
-  }
-  .contact .title {
-    margin-top: -100px;
-  }
-  .contact form {
-    min-width: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .btn.btn-primary {
-    margin-top: 20px;
-  }
-}
-@media(max-width: 450px) {
-  .my-contact-info{
-    font-size: 8px;
-  }
-  .contact a img{
-    width: 60%;
-    margin: auto;
-  }
+
 }
 
-.contact {
-  font-family: "Arial", sans-serif;
-  text-align: center;
+@media screen and (max-width:900px) {
+  .container{
+    width: 50%;
+  }
 }
-.contact-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px;
-  width: 80%;
-  max-width: 600px;
+@media screen and (max-width:600px) {
+  .container{
+    width: 60%;
+  }
 }
-.contact-info {
-  flex: 1;
-  text-align: center;
-}
-.contact-info-addr {
-  text-align: center;
-}
-.contact-actions {
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-}
-.contact p svg {
-  padding-right: 5px;
-}
-.contact p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 10px 0;
-}
-.contact-title {
-  font-size: 2rem;
-  margin-top: 50px;
-}
-.my-contact{
-  margin-top: -100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-}
-.my-contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20px;
-}
-.contact-link{
-  color: #006646!important;
-  text-decoration: none;
-}
-.contact-link:hover{
-  text-decoration: underline;
-  color:#006666!important ;
-}
-.contact-icon{
-  font-size: 20px;
+@media screen and (max-width:400px) {
+  .container{
+    width: 80%;
+  }
 }

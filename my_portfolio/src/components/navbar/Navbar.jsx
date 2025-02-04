@@ -1,20 +1,9 @@
 import "./SideBar.css"
-import { useState } from "react";
 const Navbar = ({ activeSection }) => {
-  // const [click, setClick] = useState([true, false, false, false, false, false]);
-
-  // const handleClick = (index) => {
-  //   setClick([false, false, false, false, false, false]);
-  //   setClick((prev) => {
-  //     prev[index] = true;
-  //     return prev;
-  //   });
-  // };
-
   return (
     <nav>
-      <div class="sidebar">
-        <div class="toggle-button"> </div>
+      <div className="sidebar">
+        <div className="toggle-button"> </div>
         <ul>
           <li>
             <a

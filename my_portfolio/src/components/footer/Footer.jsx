@@ -8,60 +8,7 @@ const Footer = () => {
         <div class="wave" id="wave3"></div>
         <div class="wave" id="wave4"></div>
       </div>
-      <ul class="social-icon">
-        <li class="social-icon__item">
-          <a class="social-icon__link" href="#">
-            <ion-icon name="logo-facebook"></ion-icon>
-          </a>
-        </li>
-        <li class="social-icon__item">
-          <a class="social-icon__link" href="#">
-            <ion-icon name="logo-twitter"></ion-icon>
-          </a>
-        </li>
-        <li class="social-icon__item">
-          <a class="social-icon__link" href="#">
-            <ion-icon name="logo-linkedin"></ion-icon>
-          </a>
-        </li>
-        <li class="social-icon__item">
-          <a class="social-icon__link" href="#">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
-      </ul>
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link" href="#hero">
-            Home
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#about">
-            About
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#projects">
-            Projects
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#hobbies">
-            Hobbies
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#skills">
-            Skills
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#contact">
-            Contact
-          </a>
-        </li>
-      </ul>
+      <h3><q > The best way to predict the future is to create it </q> <em>- Peter Drucker </em></h3>
       <p>&copy;2024 Mohamed ibrahim | All Rights Reserved</p>
     </footer>
   );

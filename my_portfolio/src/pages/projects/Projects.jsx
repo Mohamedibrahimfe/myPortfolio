@@ -27,20 +27,18 @@ const Projects = () => {
             marginBottom: "30px",
           }}
         >
-          <Tab>Pure Projects</Tab>
           <Tab>React Projects</Tab>
+          <Tab>Pure Projects</Tab>
         </TabList>
         <TabPanel>
-          {data.projects.map((project) => (
-            <div className="project">
+          {data.react.map((project,index) => (
+            <div key={index} className="project">
               <h3 className="project-title">{project.title}</h3>
-
               <img src={project.image} alt={project.title} />
               <div className="project-technologies">
                 <p>{project.tech}</p>
               </div>
               <p>{project.description}</p>
-
               <div className="links">
                 <a href={project.link} target="_blank" rel="noreferrer">
                   GitHub
@@ -53,14 +51,16 @@ const Projects = () => {
           ))}
         </TabPanel>
         <TabPanel>
-          {data.react.map((project) => (
-            <div className="project">
+          {data.projects.map((project,index) => (
+            <div key={index} className="project">
               <h3 className="project-title">{project.title}</h3>
+
               <img src={project.image} alt={project.title} />
               <div className="project-technologies">
                 <p>{project.tech}</p>
               </div>
               <p>{project.description}</p>
+
               <div className="links">
                 <a href={project.link} target="_blank" rel="noreferrer">
                   GitHub
