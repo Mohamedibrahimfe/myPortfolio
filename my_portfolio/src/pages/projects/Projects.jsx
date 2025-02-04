@@ -1,36 +1,9 @@
 import React from "react";
-import "../style/Projects.css";
+import "./Projects.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import data from "../data/about.json";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import data from "../../data/about.json";
 
-gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
-  // useEffect(() => {
-  //   const elements = document.querySelectorAll(".project");
-  //   elements.forEach((element) => {
-  //   gsap.fromTo(
-  //     element,
-  //     {
-  //       opacity: 0,
-  //       x: 300,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       x: 0,
-  //       duration: 0.5,
-  //       stegger: 1,
-  //       scrollTrigger: {
-  //         trigger: element,
-  //         start: "top 80%",
-  //         toggleActions: "play none none reverse",
-  //       },
-  //     }
-  //   );
-  // });
-  //   })
   return (
     <section className="projects" id="projects">
       <h1 className="title protittle">Projects</h1>

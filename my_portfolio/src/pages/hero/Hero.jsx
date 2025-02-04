@@ -1,50 +1,8 @@
-import "../style/Hero.css";
-import "../style/ThemeIcon.css";
-import "../data/about.json";
-import Div from "../pages/Div";
-import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
+import "./Hero.css";
+import "../../components/themetoggle/ThemeIcon.css";
+import "../../data/about.json";
+import { useState, useEffect } from "react";
 const Home = (props) => {
-  const titleRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const firstButtonRef = useRef(null);
-  const secondButtonRef = useRef(null);
-  const socialRef = useRef(null);
-  const imgRef = useRef(null);
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      titleRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power4.out", delay: 5 }
-    )
-      .fromTo(
-        subtitleRef.current,
-        { opacity: 0, y: 100 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power4.out" }
-      )
-      .fromTo(
-        firstButtonRef.current,
-        { opacity: 0, x: -100 },
-        { opacity: 1, x: 0, duration: 0.8, ease: "power4.out" }
-      )
-      .fromTo(
-        secondButtonRef.current,
-        { opacity: 0, x: 100 },
-        { opacity: 1, x: 0, duration: 0.8, ease: "power4.out" }
-      )
-      .fromTo(
-        socialRef.current,
-        { opacity: 0, y: 100 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power4.out" }
-      )
-      .fromTo(
-        imgRef.current,
-        { opacity: 0, y: -100 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power4.out" }
-      );
-  }, []);
-
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -108,7 +66,6 @@ const Home = (props) => {
 
   return (
     <>
-      <Div />
       <section className="hero" id="hero">
         <div className="theme-icon">
           <label className="switch">
@@ -122,16 +79,12 @@ const Home = (props) => {
           </label>
         </div>
         <div className="hero-container">
-          <div ref={imgRef}>
+          <div>
             <img alt="" className="block" src="" />
           </div>
-          <h1 className="my-name" ref={titleRef}>
-            Mohamed Ibrahim
-          </h1>
-          <p className="subtitle" ref={subtitleRef}>
-            Frontend Developer | React.js
-          </p>
-          <div className="social-hero-icons" ref={socialRef}>
+          <h1 className="my-name">Mohamed Ibrahim</h1>
+          <p className="subtitle">Frontend Developer | React.js</p>
+          <div className="social-hero-icons">
             <a href="https://github.com/Mohamedibrahimfe">
               <i className="bi bi-github"></i>
             </a>
@@ -152,7 +105,6 @@ const Home = (props) => {
               className="btn "
               Download
               href="/Mohamedibrahimfe/myPortfolio/blob/main/my_portfolio/public/cv-fe-v2.pdf"
-              ref={firstButtonRef}
             >
               <span class="transition"></span>
               <span class="gradient"></span>
@@ -169,7 +121,7 @@ const Home = (props) => {
               </svg>{" "}
               <span class="label">Download CV</span>
             </button>
-            <button className="btn" href="#contact" ref={secondButtonRef}>
+            <button className="btn" href="#contact">
               <span class="transition"></span>
               <span class="gradient"></span>{" "}
               <svg

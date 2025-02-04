@@ -17,7 +17,7 @@
   gap: 30px;
 }
 .hero img {
-  background-image: url(../../public/logo192.png);
+  /* background-image: url(../../public/logo192.png); */
   background-size: cover;
   background-position: center;
   height: 150px;

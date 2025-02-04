@@ -1,6 +1,6 @@
 import React from "react";
-import "../style/Contact.css";
-import data from "../data/about.json";
+import "./Contact.css";
+import data from "../../data/about.json";
 const Contact = () => {
   return (
     <section className="contact" id="contact">

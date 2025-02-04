@@ -1,4 +1,4 @@
-import "../style/SideBar.css";
+import "./SideBar.css"
 import { useState } from "react";
 const Navbar = ({ activeSection }) => {
   // const [click, setClick] = useState([true, false, false, false, false, false]);

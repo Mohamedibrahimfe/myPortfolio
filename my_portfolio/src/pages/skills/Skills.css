@@ -41,6 +41,7 @@
   background-size: 80px ;
   background-repeat: no-repeat;
 }
+/* 
 .html{
   background-image: url(../../public/skills/html.png);
 }
@@ -78,7 +79,7 @@
 .vs{
   background-image: url(../../public/skills/vs.png);
   background-size: cover;
-  /* background-position: center; */
+  // background-position: center; 
 }
 .git{
   background-image: url(../../public/skills/git.png);
@@ -98,7 +99,8 @@
 }
 .prob{
   background-image: url(../../public/skills/prob.jpeg);
-}
+} */
+
 @media screen and (max-width: 860px) {
   .skills-list{
     grid-template-columns: repeat(4, 1fr);

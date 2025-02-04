@@ -1,6 +1,6 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import "../style/Skills.css";
+import "./Skills.css";
 const skills = () => {
   return (
     <section className="skills" id="skills">
