@@ -175,7 +175,7 @@
   transform: translate(-50%, -50%);
 }
 
-button:hover .transition {
+button:hover .transition ,.exception:hover .transition {
   width: 16em;
   height: 14em;
 }
