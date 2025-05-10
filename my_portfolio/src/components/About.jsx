@@ -1,5 +1,5 @@
-import aboutData from "../../data/about.json";
-import "./About.css";
+import aboutData from "../data/about.json";
+import "../assets/css/About.css";
 const About = () => {
   return (
     <section className="about" id="about">

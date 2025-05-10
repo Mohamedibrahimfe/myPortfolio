@@ -1,9 +1,11 @@
-import "./Hero.css";
-import "../../components/themetoggle/ThemeIcon.css";
-import "../../data/about.json";
-import resume from "../../assets/resume.pdf"
+import "../assets/css/Hero.css";
+import "../components/themetoggle/ThemeIcon.css";
+import "../data/about.json";
+import resume from "../assets/resume.pdf";
 import { useState, useEffect } from "react";
-const Home = (props) => {
+import myImage from '../assets/me.png';
+
+const Hero = (props) => {
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -28,9 +30,10 @@ const Home = (props) => {
     }
   };
 
-  const [dark, ] = useState(() => {
+  const [dark, setDark] = useState(() => {
     const localValue = localStorage.getItem("isChecked");
-    if (localValue == null) return null;
+    if (localValue == null) return false;
+    return localValue === "true";
   });
 
   const sections = [
@@ -82,7 +85,7 @@ const Home = (props) => {
         </div>
         <div className="hero-container">
           <div>
-            <img alt="" className="block" src="" />
+            <img alt="Mohamed Ibrahim" className="block" src={myImage} loading="lazy" />
           </div>
           <h1 className="my-name">Mohamed Ibrahim</h1>
           <p className="subtitle">Frontend Developer | React.js</p>
@@ -218,4 +221,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default Hero;

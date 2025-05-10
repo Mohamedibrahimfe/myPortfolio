@@ -26,7 +26,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <div className="theme-toggle" onClick={toggleTheme}>
+    <div aria-label="Toggle dark mode" className="theme-toggle" onClick={toggleTheme}>
       {theme === "light-mode" ? (
         <FaMoon className="icon moon" />
       ) : (

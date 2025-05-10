@@ -1,17 +1,17 @@
-import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
-
-
-import Navbar from './components/navbar/Navbar'
-import Hero from './pages/hero/Hero'
-import About from "./pages/about/About";
-import Projects from "./pages/projects/Projects";
-import Hobbies from "./pages/hobbies/Hobbies";
-import Skills from './pages/skills/Skills'
-import Footer from './components/footer/Footer'
-import Contact from './pages/contact/Contact'
-
+import React from "react";
+import Navbar from "../components/navbar/Navbar";
+import Projects from "../components/Projects";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Hobbies from "../components/Hobbies";
+import Skills from "../components/Skills";
+import Footer from "../components/footer/Footer";
+import Contact from "../components/Contact";
+import SEO from "../components/SEO";
 import { useState, useEffect } from "react";
-function App() {
+import Quote from "../components/Quote";
+
+const Home = () => {
   const [activeSection, setActiveSection] = useState("hero");
   // Function to update active section based on scroll position
   const handleScroll = () => {
@@ -38,18 +38,20 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [activeSection]);
+  
   return (
     <div className="App">
+      <SEO />
       <Navbar activeSection={activeSection} />
       <Hero theme={localStorage.getItem("theme")} />
-      <About />
+      {/* <About /> */}
       <Projects />
-      <Hobbies />
+      <Quote/>
       <Skills />
       <Contact />
+      <Hobbies />
       <Footer />
     </div>
   );
-}
-
-export default App;
+};
+export default Home;

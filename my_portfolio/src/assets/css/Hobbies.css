@@ -1,0 +1,123 @@
+.hobbies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  /* background: var(--card-bg-color); */
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      rgba(9, 132, 227, 0.1),
+      rgba(116, 185, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.hobby-image {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  border-radius: calc(var(--border-radius) - 4px);
+  margin-bottom: 1.5rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.05);
+}
+
+.card:hover .hobby-image {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.description {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  text-align: center;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+  .hobbies {
+    padding: 80px 20px;
+  }
+
+  .hobbys-title {
+    font-size: 2rem;
+  }
+
+  .hobbies-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+/* Dark mode */
+body.dark .hobbies {
+  background: linear-gradient(to top, transparent, rgba(116, 185, 255, 0.05));
+}
+
+body.dark .card {
+  background: var(--dk-card-bg-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .description {
+  color: var(--dk-primary-text);
+}
+
+body.dark .card::before {
+  background: linear-gradient(45deg,
+      rgba(116, 185, 255, 0.1),
+      rgba(255, 255, 255, 0.05));
+}

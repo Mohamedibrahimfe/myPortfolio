@@ -1,5 +1,5 @@
-import data from "../../data/about.json";
-import "./Hobbies.css";
+import data from "../data/about.json";
+import "../assets/css/Hobbies.css";
 const Hobbies = () => {
   return (
     <section id="hobbies">
