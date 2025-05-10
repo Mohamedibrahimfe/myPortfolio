@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/navbar/Navbar";
 import Projects from "../components/Projects";
 import Hero from "../components/Hero";
-import About from "../components/About";
 import Hobbies from "../components/Hobbies";
 import Skills from "../components/Skills";
 import Footer from "../components/footer/Footer";
@@ -44,12 +43,11 @@ const Home = () => {
       <SEO />
       <Navbar activeSection={activeSection} />
       <Hero theme={localStorage.getItem("theme")} />
-      {/* <About /> */}
       <Projects />
       <Quote/>
       <Skills />
-      <Contact />
       <Hobbies />
+      <Contact />
       <Footer />
     </div>
   );

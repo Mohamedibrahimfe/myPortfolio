@@ -96,6 +96,9 @@
   transform: translateY(-2px);
 }
 
+.wordpress-title{
+  text-align: center;
+}
 @media screen and (max-width: 768px) {
   .project {
     padding: 1.5rem;

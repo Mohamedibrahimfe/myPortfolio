@@ -5,8 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout.jsx";
 import Home from "./pages/Home";
 import Articles from "./pages/Articles";
-// import Blogs from "./pages/Blogs";
-// import Contact from "./pages/Contact";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 import "./index.css";
@@ -18,6 +17,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/articles" element={<Articles />} />
+            <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

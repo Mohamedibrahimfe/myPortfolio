@@ -6,10 +6,9 @@ const Layout = () => {
     <>
       <header><nav>
         <ul>
-          <li><Link>Article</Link></li>
-          <li><Link>About</Link></li>
-          <li><Link>Projects</Link></li>
-          <li><Link>Contact</Link></li>
+          <li><Link to="/articles">Article</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
         </ul>
       </nav></header>
       <div className="home-container"><Outlet /></div>

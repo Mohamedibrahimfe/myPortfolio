@@ -103,7 +103,9 @@ q {
   -webkit-text-fill-color: transparent;
   animation: quote-animation;
 }
-
+a{
+  text-decoration: none;
+}
 
 @keyframes float {
   0% {
