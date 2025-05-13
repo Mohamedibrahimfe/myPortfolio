@@ -3,15 +3,26 @@ import "../assets/css/Projects.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import data from "../data/about.json";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const Projects = () => {
   const reactProjects = data.react || [];
   const pureProjects = data.projects || [];
   const wordpressProjects = data.wordpress || []; // Add this line to get the WordPress projects from the data.jso
-  console.log(reactProjects.length - 6);
-
+  const metaData = {
+    title: "Mohamed Ibrahim - Projects",
+    description:
+      "Explore my projects, including React.js applications, pure JavaScript projects, and WordPress sites. Discover my work and skills.",
+    name: "Mohamed Ibrahim",
+    type: "website",
+  };
+  const [numberOfProjects, setNumberOfProjects] = useState(0);
+  const handleMoreProjects = () => {
+    setNumberOfProjects((prev) => prev + 6);
+  };
   return (
     <section id="projects" className="section-container">
+      <SEO title={metaData.title} description={metaData.description} name={metaData.name} type={metaData.type} />
       <h1 className="title">Projects</h1>
 
       <Tabs>
@@ -23,7 +34,7 @@ const Projects = () => {
 
         <TabPanel>
           <div className="projects-grid">
-            {reactProjects.slice(reactProjects.length - 7, reactProjects.length - 1).map((project, index) => (
+            {reactProjects.slice(0, 6).map((project, index) => (
               <div key={index} className="project-card">
                 <div className="project-image-container">
                   <img src={project.image} alt={project.title} loading="lazy" />
@@ -48,12 +59,10 @@ const Projects = () => {
               </div>
             ))}
           </div>
-
-
           <div className="more-container">
-            <Link className="more" to="Projects">
+            <button className="more" onClick={handleMoreProjects}>
               Show More Projects <i className="bi bi-arrow-up-right-circle"></i>
-            </Link>
+            </button>
           </div>
         </TabPanel>
 

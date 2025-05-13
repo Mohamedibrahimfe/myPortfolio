@@ -38,9 +38,16 @@ const Home = () => {
     };
   }, [activeSection]);
 
+  const data = {
+    title: "Mohamed Ibrahim - Frontend Developer",
+    description:
+      "Frontend Developer specializing in React.js. View my portfolio to see my projects and skills.",
+    name: "Mohamed Ibrahim",
+    type: "website",
+  };
   return (
     <div className="App">
-      <SEO />
+      <SEO name={data.name} title={data.title} description={data.description} type={data.type} />
       <Navbar activeSection={activeSection} />
       <Hero />
       <Projects />

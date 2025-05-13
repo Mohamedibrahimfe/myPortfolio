@@ -9,6 +9,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 import "./index.css";
+import Projects from "./pages/Projects.jsx";
 export default function App() {
   return (
     <HelmetProvider>
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/articles" element={<Articles />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Route>

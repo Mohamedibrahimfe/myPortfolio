@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import aboutData from "../data/about.json";
 import "../assets/css/About.css";
+import SEO from "../components/SEO";
 
 const About = () => {
   const sectionRefs = useRef([]);
@@ -29,8 +30,16 @@ const About = () => {
     return () => observer.disconnect();
   }, []);
 
+  const data = {
+    title: "Mohamed Ibrahim - About Me",
+    description:
+      "Learn more about Mohamed Ibrahim, a frontend developer specializing in React.js. Discover my journey, education, and beliefs.",
+    name: "Mohamed Ibrahim",
+    type: "website",
+  };
   return (
     <section className="about" id="about">
+      <SEO title={data.title} description={data.description} name={data.name} type={data.type} />
       <h2 className="aboutTitle">
         {aboutData.data.about.greeting}
         <span className="wave">👋</span>
