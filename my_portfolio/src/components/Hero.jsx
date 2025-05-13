@@ -31,6 +31,9 @@ const Hero = () => {
             <a href="https://wa.link/csa1mk" target="_blank">
               <i className="bi bi-whatsapp"></i>
             </a>
+            <a href="https://www.mostaql.com/mohamedibrahimfe">
+              <i className="bi bi-mostaql"></i>
+            </a>
           </div>
 
           <div className="cta-buttons">
