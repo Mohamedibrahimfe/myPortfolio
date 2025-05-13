@@ -89,16 +89,17 @@ section {
   justify-content: center;
   background: linear-gradient(60deg, var(--card-bg-color), var(--accent-color), var(--card-bg-color));
   /* blurr y-axis borders */
-  mask-image: linear-gradient(to top, transparent, black 20%, black 80%, transparent);
-  -webkit-mask-image: linear-gradient(to top, transparent, black 50%, black 50%, transparent);
+  mask-image: linear-gradient(to top, transparent, black 80%, black 10%, transparent);
+  -webkit-mask-image: linear-gradient(to top, transparent, black 10%, black 80%, transparent);
   animation: quote-animation;
 }
 
 q {
   font-size: 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font: 5.2em sans-serif;
-  background: linear-gradient(60deg, var(--dk-bg-color), var(--bg-color), var(--dk-bg-color));
+  font: 4.5em sans-serif;
+  font-weight: 700;
+  background: linear-gradient( var(--bg-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: quote-animation;

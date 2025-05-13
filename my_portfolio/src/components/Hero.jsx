@@ -1,94 +1,20 @@
 import "../assets/css/Hero.css";
-import "../components/themetoggle/ThemeIcon.css";
 import "../data/about.json";
 import resume from "../assets/resume.pdf";
-import { useState, useEffect } from "react";
 import myImage from '../assets/me.png';
 
-const Hero = (props) => {
-  useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      document.body.classList.add("dark");
-    }
-    if (theme === "light") {
-      document.body.classList.remove("dark");
-    }
-  }, []);
-  const [, setIsChecked] = useState(false);
-  const toggleDarkMode = () => {
-    if (document.body.classList.contains("dark")) {
-      document.body.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      localStorage.setItem("isChecked", true);
-      setIsChecked(true);
-    } else {
-      document.body.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      localStorage.setItem("isChecked", false);
-      setIsChecked(false);
-    }
-  };
-
-  const [dark, setDark] = useState(() => {
-    const localValue = localStorage.getItem("isChecked");
-    if (localValue == null) return false;
-    return localValue === "true";
-  });
-
-  const sections = [
-    "#hero",
-    "#about",
-    "#projects",
-    "#hobbies",
-    "#skills",
-    "#contact",
-  ];
-  const [currentSection, setCurrentSection] = useState("#hero");
-  const handleNextSection = () => {
-    const currentIndex = sections.indexOf(currentSection);
-    const nextIndex = (currentIndex + 1) % sections.length; // Loops back to the first section after the last one
-    setCurrentSection(sections[nextIndex]);
-  };
-  const [isAtBottom, setIsAtBottom] = useState(false);
-
-  const checkIfAtBottom = () => {
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const pageHeight = document.documentElement.scrollHeight;
-
-    // If the scroll position is near the bottom (within 10px of the end)
-    if (scrollPosition >= pageHeight - 150) {
-      setIsAtBottom(true);
-    } else {
-      setIsAtBottom(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", checkIfAtBottom);
-
-    // Cleanup the event listener on unmount
-    return () => {
-      window.removeEventListener("scroll", checkIfAtBottom);
-    };
-  }, []);
-
+const Hero = () => {
   return (
     <>
       <section className="hero" id="hero">
-        <div className="theme-icon">
-          <label className="switch">
-            <p>Dark Mode</p>
-            <input type="checkbox" checked={dark} onClick={toggleDarkMode} />
-            <span className="slider round"></span>
-          </label>
-        </div>
         <div className="hero-container">
           <div>
             <img alt="Mohamed Ibrahim" className="block" src={myImage} loading="lazy" />
           </div>
           <h1 className="my-name">Mohamed Ibrahim</h1>
           <p className="subtitle">Frontend Developer | React.js</p>
+
+          <p className="hero-description">I build modern, animated, conversion-focused websites and web apps for small businesses and startups.</p>
           <div className="social-hero-icons">
             <a href="https://github.com/Mohamedibrahimfe">
               <i className="bi bi-github"></i>
@@ -101,6 +27,9 @@ const Hero = (props) => {
             </a>
             <a href="https://www.facebook.com/profile.php?id=100078061937722">
               <i className="bi bi-facebook"></i>
+            </a>
+            <a href="https://wa.link/csa1mk" target="_blank">
+              <i className="bi bi-whatsapp"></i>
             </a>
           </div>
 
@@ -142,80 +71,7 @@ const Hero = (props) => {
             </a>
           </div>
         </div>
-        <a
-          className="next-section"
-          href={currentSection}
-          onClick={handleNextSection}
-        >
-          {!isAtBottom ? (
-            <svg
-              fill="#000000"
-              height="200px"
-              className="next-section-icon"
-              width="2.2rem"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 330 330"
-              xmlspace="preserve"
-              transform="rotate(180)"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <g id="XMLID_13_">
-                  {" "}
-                  <path
-                    id="XMLID_14_"
-                    d="M175.605,104.393c-2.814-2.813-6.628-4.393-10.607-4.393c-3.979,0-7.794,1.581-10.607,4.394l-79.998,80 c-5.857,5.858-5.857,15.355,0.001,21.213c5.857,5.857,15.355,5.858,21.213-0.001l69.392-69.393l69.395,69.394 C237.322,208.536,241.161,210,245,210s7.678-1.464,10.606-4.394c5.858-5.858,5.858-15.355,0-21.213L175.605,104.393z"
-                  ></path>{" "}
-                  <path
-                    id="XMLID_15_"
-                    d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300 c-74.439,0-135-60.561-135-135S90.561,30,165,30s135,60.561,135,135S239.439,300,165,300z"
-                  ></path>{" "}
-                </g>{" "}
-              </g>
-            </svg>
-          ) : (
-            <svg
-              fill="#000000"
-              width="2.2rem"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              // xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 330 330"
-              // xml:space="preserve"
-              className="next-section-icon"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <g id="XMLID_13_">
-                  {" "}
-                  <path
-                    id="XMLID_14_"
-                    d="M175.605,104.393c-2.814-2.813-6.628-4.393-10.607-4.393c-3.979,0-7.794,1.581-10.607,4.394l-79.998,80 c-5.857,5.858-5.857,15.355,0.001,21.213c5.857,5.857,15.355,5.858,21.213-0.001l69.392-69.393l69.395,69.394 C237.322,208.536,241.161,210,245,210s7.678-1.464,10.606-4.394c5.858-5.858,5.858-15.355,0-21.213L175.605,104.393z"
-                  ></path>{" "}
-                  <path
-                    id="XMLID_15_"
-                    d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300 c-74.439,0-135-60.561-135-135S90.561,30,165,30s135,60.561,135,135S239.439,300,165,300z"
-                  ></path>{" "}
-                </g>{" "}
-              </g>
-            </svg>
-          )}
-        </a>
+        
       </section>
     </>
   );

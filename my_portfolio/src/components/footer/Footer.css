@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   background: var(--accent-color);
-  min-height: 100px;
+  min-height: 80px;
   /* padding: 3rem 2rem; */
   display: flex;
   justify-content: center;
@@ -13,7 +13,21 @@
   color: white;
   overflow: hidden;
 }
-
+.flex-between{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  a{
+    color: white!important;
+  }
+}
+.gap{
+  display: flex;
+  gap: 1rem;
+}
 .footer h3 {
   font-size: 2rem;
   margin-bottom: 1.5rem;

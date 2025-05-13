@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./style.css"
+
 const Layout = () => {
   return (
     <>
@@ -13,6 +14,16 @@ const Layout = () => {
         </ul>
       </nav></header>
       <div className="home-container"><Outlet /></div>
+      <div className="contact-buttons">
+        <a href="mailto:mohamed.ibrahimfe@gmail.com" className="contact-btn">
+          <i className="bi bi-envelope-fill"></i>
+          Contact Me
+        </a>
+        <a href="https://wa.link/csa1mk" target="_blank" className="whatsapp-btn">
+          <i className="bi bi-whatsapp"></i>
+          WhatsApp
+        </a>
+      </div>
     </>
   )
 };

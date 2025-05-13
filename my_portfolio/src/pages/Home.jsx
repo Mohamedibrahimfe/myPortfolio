@@ -37,14 +37,14 @@ const Home = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [activeSection]);
-  
+
   return (
     <div className="App">
       <SEO />
       <Navbar activeSection={activeSection} />
-      <Hero theme={localStorage.getItem("theme")} />
+      <Hero />
       <Projects />
-      <Quote/>
+      <Quote />
       <Skills />
       <Hobbies />
       <Contact />

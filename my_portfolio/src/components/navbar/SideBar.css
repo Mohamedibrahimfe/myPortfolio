@@ -76,14 +76,14 @@
   opacity: 1;
   visibility: visible;
   left: 150%;
+  padding: 0.5rem;
 }
 
 .sidebar li:nth-child(1) a::after { content: 'Home'; }
-.sidebar li:nth-child(2) a::after { content: 'About'; }
-.sidebar li:nth-child(3) a::after { content: 'Projects'; }
+.sidebar li:nth-child(2) a::after { content: 'Projects'; }
+.sidebar li:nth-child(3) a::after { content: 'Skills'; }
 .sidebar li:nth-child(4) a::after { content: 'Hobbies'; }
-.sidebar li:nth-child(5) a::after { content: 'Skills'; }
-.sidebar li:nth-child(6) a::after { content: 'Contact'; }
+.sidebar li:nth-child(5) a::after { content: 'Contact'; }
 
 @media screen and (max-width: 768px) {
   .sidebar {
